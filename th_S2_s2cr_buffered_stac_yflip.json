@@ -1,0 +1,58 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+  ],
+  "id": "ndvi-example-stac-item",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -25.0,
+          34.0
+        ],
+        [
+          46.400000000000006,
+          34.0
+        ],
+        [
+          46.400000000000006,
+          72.0
+        ],
+        [
+          -25.0,
+          72.0
+        ],
+        [
+          -25.0,
+          34.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -25.0,
+    34.0,
+    46.400000000000006,
+    72.0
+  ],
+  "properties": {
+    "proj:epsg": 4326,
+    "datetime": "2022-01-01T00:00:00Z"
+  },
+  "links": [],
+  "assets": {
+    "ndvi": {
+      "href": "https://github.com/Schiggebam/dlr_scmap_resources/raw/main/th_S2_s2cr_buffered_yflip.tif",
+      "title": "S2 Sen2Cor PVIR2 threshold image for SCMaP",
+      "eo:bands": [
+        {
+          "name": "S2_s2cr_pvir2_threshold_img"
+        }
+      ]
+    }
+  }
+}
